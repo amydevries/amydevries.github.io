@@ -1,0 +1,15 @@
+MY CODE REFERENCES 
+
+***In addition to bootstrap and jquery libraries, I also referenced and used code from the following sources:***
+
+GoogleMaps:
+https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+
+API calls in Javascript: 
+http://www.openjs.com/articles/ajax_xmlhttp_using_post.php
+
+XML Parsing in Javascript: 
+http://www.w3schools.com/xml/dom_intro.asp
+
+Jquery detecting keyboard input in textbox: 
+http://stackoverflow.com/questions/4220126/run-javascript-function-when-user-finishes-typing-instead-of-on-key-up

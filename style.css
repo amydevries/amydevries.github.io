@@ -1,0 +1,123 @@
+#map{
+	height: 400px;
+    width: 100%;
+}
+
+.alert-info{
+	color: white; 
+	background-color:#79b0b5;
+	border-color:  #3a5456;
+}
+
+.title{
+	font-family: 'Bree Serif', serif;
+	color: #3a5456; 
+	padding-top: 0px;
+}
+
+.titleWhite{
+	font-family: 'Bree Serif', serif;
+	color: white; 
+	padding-bottom: 1%;
+}
+
+
+.body{
+	background-color: #b3e0df; 
+	color: #3a5456;
+	font-family: 'Raleway', sans-serif;
+}
+
+.stuffContainer{
+	padding-top: 1%;
+}
+
+.form-control{
+	opacity: 0.7
+}
+
+.drop{
+	opacity: 0.7; 
+	vertical-align: middle; 
+}
+
+.drop:hover{
+	color: black; 	
+}
+
+.centerDropDowns{
+	text-align: center;
+}
+
+.noPad{
+	margin-top:0;
+	text-align: center; 
+}
+
+.hr{
+	opacity: 0.7; 
+	margin: 1%
+}
+
+.glyphiconGlobe{
+	color: white;
+}
+
+.glyphiconOther{
+	color: #3a5456;
+}
+
+.header{
+	background-color: #3a5456;
+	color: white;
+	text-align: center;
+	margin-bottom: 0; 
+}
+
+.secondHeader{
+	padding-top: 1%; 
+	background-color: #79b0b5;
+}
+
+.bottom{
+	padding-top: 1%
+}
+
+.icons{
+	text-align: center;
+}
+
+.desc {
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+.img{
+	text-align: center;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%; 
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+

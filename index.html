@@ -1,0 +1,251 @@
+<html>
+	<head>
+	    <title>GatorTranslator</title>
+	</head>
+
+	<body  class="body">
+
+		<div class="header col-md-12">
+			<div class="container">
+				<h1 class="titleWhite col-md-12"><small><span class="glyphiconGlobe glyphicon glyphicon-globe"></span></small> GatorTranslator <small><span class="glyphiconGlobe glyphicon glyphicon-globe"></span></small></h1>
+			</div>
+		</div>
+
+		<div class="col-md-12 form-group secondHeader">
+			<div class="container">
+
+				<div class = "col-md-6 form-group centerDropdowns">
+					<select class="drop btn dropdown-toggle btn-default" id="languageOne" onclick="updateLang1()">
+						<option selected disabled>Select Language 1 </option>
+					</select>
+				</div>
+				<div class = "col-md-6 form-group centerDropdowns">
+					<select class="drop btn btn-default dropdown-toggle" id="twoLanguage" onchange="updateLang2()">
+						<option selected disabled>Select Language 2</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+						
+			<div class = "col-md-6 form-group">
+				<h3 class="title noPad">Question:</h3>
+			    <textarea class="form-control" id="textbox1"></textarea>
+			    <textarea class="form-control" id="textbox2"></textarea>
+			</div>
+			<div class = "col-md-6 form-group">
+				<h3 class="title noPad">Answer:</h3>
+			    <textarea class="form-control" id="textbox3"></textarea>
+			    <textarea class="form-control" id="textbox4"></textarea>
+			</div>			
+
+			<div class="col-md-12">
+				<div class="icons">
+					<button onclick="showMap()" class="btn btn-default"><span class="glyphiconOther glyphicon glyphicon-map-marker"></span> Map</button>
+					<button onclick="showUfImages()" class="btn btn-default"><span class="glyphiconOther glyphicon glyphicon-picture"></span> UF Image Gallery</button>
+					<button onclick="showFoodImages()" class="btn btn-default"><span class="glyphiconOther glyphicon glyphicon-cutlery"></span> Food Image Gallery</button>
+					<a onclick="messagePopup()" href="#"><span class="glyphiconOther glyphicon glyphicon-info-sign"></span></a>
+				</div>
+			</div>
+
+
+			<div class="col-md-12 stuffContainer">
+
+			<div class="alert alert-info alert-dismissable" id="popupAlert" style="display:none">
+			  <a href="#" onclick="closeMessage()" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			  Utilize the map and image galleries as visual cues to assist in the communication process.
+			</div>
+
+				<div id="map"></div>
+
+				<div id="ufImages">
+					<div id="firstPageUfImages">
+						<div class="img col-md-4">
+						  	<a target="_blank" href="ufImages/CenturyTower.jpg">
+						    	<img src="ufImages/CenturyTower.jpg" alt="CenturyTower" width="275" height="175">
+						  	</a>
+	  						<div class="desc">Century Tower</div>
+						</div>
+						<div class="img col-md-4">
+						  	<a target="_blank" href="ufImages/Bookstore.jpg">
+						    	<img src="ufImages/Bookstore.jpg" alt="Bookstore" width="275" height="175">
+						  	</a>
+	  						<div class="desc">Bookstore</div>
+						</div>
+						<div class="img col-md-4">
+						  	<a target="_blank" href="ufImages/Swamp.jpg">
+						    	<img src="ufImages/Swamp.jpg" alt="Swamp" width="275" height="175">
+						  	</a>
+	  						<div class="desc">The Swamp</div>
+						</div>
+						<div class="img col-md-4">
+						  	<a target="_blank" href="ufImages/ReitzUnion.jpg">
+						    	<img src="ufImages/ReitzUnion.jpg" alt="ReitzUnion" width="275" height="175">
+						  	</a>
+	  						<div class="desc">Reitz Union</div>
+						</div>
+						<div class="img col-md-4">
+						  	<a target="_blank" href="ufImages/FrenchFries.png">
+						    	<img src="ufImages/FrenchFries.png" alt="FrenchFries" width="275" height="175">
+						  	</a>
+	  						<div class="desc">French Fries</div>
+						</div>
+						<div class="img col-md-4">
+						  	<a target="_blank" href="ufImages/Turlington.jpg">
+						    	<img src="ufImages/Turlington.jpg" alt="Turlington" width="275" height="175">
+						  	</a>
+	  						<div class="desc">Turlington</div>
+						</div>
+						<div class="col-md-12 centerDropdowns">
+							<button class="btn btn-xs btn-default" onclick="goToPage2UfImages()">Next</button>
+						</div>
+					</div>
+				
+						<div id="secondPageUfImages">
+							<div class="img col-md-4">
+						  		<a target="_blank" href="ufImages/UniversityAuditorium.jpg">
+						    		<img src="ufImages/UniversityAuditorium.jpg" alt="UniversityAuditorium" width="275" height="175">
+						  		</a>
+	  							<div class="desc">University Auditorium</div>
+							</div>
+							<div class="img col-md-4">
+						  		<a target="_blank" href="ufImages/LakeAlice.jpg">
+						    		<img src="ufImages/LakeAlice.jpg" alt="LakeAlice" width="275" height="175">
+						  		</a>
+	  							<div class="desc">Lake Alice</div>
+							</div>
+							<div class="img col-md-4">
+						  		<a target="_blank" href="ufImages/LakeWauberg.jpg">
+						    		<img src="ufImages/LakeWauberg.jpg" alt="LakeWauberg" width="275" height="175">
+						  		</a>
+	  							<div class="desc">Lake Wauberg</div>
+							</div>
+							<div class="img col-md-4">
+						  		<a target="_blank" href="ufImages/SouthwestRec.jpg">
+						    		<img src="ufImages/SouthwestRec.jpg" alt="SouthwestRec" width="275" height="175">
+						  		</a>
+	  							<div class="desc">Southwest Recreation Center</div>
+							</div>
+							<div class="img col-md-4">
+						  		<a target="_blank" href="ufImages/PhillipsCenter.jpg">
+						    		<img src="ufImages/PhillipsCenter.jpg" alt="PhillipsCenter" width="275" height="175">
+						  		</a>
+	  							<div class="desc">Phillip's Center</div>
+							</div>
+							<div class="img col-md-4">
+						  		<a target="_blank" href="ufImages/OConnellCenter.jpg">
+						    		<img src="ufImages/OConnellCenter.jpg" alt="OconnellCenter" width="275" height="175">
+						  		</a>
+	  							<div class="desc">O'Connell Center</div>
+							</div>
+							<div class="col-md-12 centerDropdowns">
+								<button class="btn btn-xs btn-default" onclick="goToPage1UfImages()">Previous</button>
+							</div>
+						</div>
+				</div>
+				<div id="foodImages">
+					<div id="firstPageFoodImages">
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/RotisserieChicken.jpg">
+					    		<img src="foodImages/RotisserieChicken.jpg" alt="RotisserieChicken" width="275" height="175">
+					  		</a>
+  							<div class="desc">Rotisserie Chicken</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/CurryFriedRice.jpg">
+					    		<img src="foodImages/CurryFriedRice.jpg" alt="CurryFriedRice" width="275" height="175">
+					  		</a>
+  							<div class="desc">Curry Fried Rice</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/Cheeseburger.jpg">
+					    		<img src="foodImages/Cheeseburger.jpg" alt="Cheeseburger" width="275" height="175">
+					  		</a>
+  							<div class="desc">Cheeseburger</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/Pizza.jpg">
+					    		<img src="foodImages/Pizza.jpg" alt="Pizza" width="275" height="175">
+					  		</a>
+  							<div class="desc">Pizza</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/Tacos.jpg">
+					    		<img src="foodImages/Tacos.jpg" alt="Tacos" width="275" height="175">
+					  		</a>
+  							<div class="desc">Tacos</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/IceCream.jpg">
+					    		<img src="foodImages/IceCream.jpg" alt="IceCream" width="275" height="175">
+					  		</a>
+  							<div class="desc">Ice Cream</div>
+						</div>
+						<div class="col-md-12 centerDropdowns">
+							<button class="btn btn-xs btn-default" onclick="goToPage2FoodImages()">Next</button>
+						</div>
+					</div>
+					<div id="secondPageFoodImages">
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/TaterTots.jpg">
+					    		<img src="foodImages/TaterTots.jpg" alt="TaterTots" width="275" height="175">
+					  		</a>
+  							<div class="desc">Tater Tots</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/Steak.jpg">
+					    		<img src="foodImages/Steak.jpg" alt="Steak" width="275" height="175">
+					  		</a>
+  							<div class="desc">Steak</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/Sushi.jpg">
+					    		<img src="foodImages/Sushi.jpg" alt="Sushi" width="275" height="175">
+					  		</a>
+  							<div class="desc">Sushi</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/Spaghetti.jpg">
+					    		<img src="foodImages/Spaghetti.jpg" alt="Spaghetti" width="275" height="175">
+					  		</a>
+  							<div class="desc">Spaghetti</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/Donuts.jpg">
+					    		<img src="foodImages/Donuts.jpg" alt="Donuts" width="275" height="175">
+					  		</a>
+  							<div class="desc">Donuts</div>
+						</div>
+						<div class="img col-md-4">
+					  		<a target="_blank" href="foodImages/PotatoChips.jpg">
+					    		<img src="foodImages/PotatoChips.jpg" alt="PotatoChips" width="275" height="175">
+					  		</a>
+  							<div class="desc">Potato Chips</div>
+						</div>
+						<div class="col-md-12 centerDropdowns">
+								<button class="btn btn-xs btn-default" onclick="goToPage1FoodImages()">Previous</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-12">
+				<div class="col-md-offset-4 col-md-4 bottom">
+					<button class="title form-control btn btn-default" id="finish" onclick="finish()">Complete Interaction</button>
+				</div>
+			</div>
+
+		</div>
+	    
+
+
+	</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="Translator.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMek8LdLVKE5cK71pCl9gg1GAgSGG-Nmk&callback=initMap"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
